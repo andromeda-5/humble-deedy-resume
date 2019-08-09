@@ -1,0 +1,192 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\graphicspath{ {./images/}}
+\usepackage{titlesec}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[usenames, dvipsnames]{color}
+
+\titleformat{\section}
+
+
+\definecolor{pinkish}{RGB}{200, 134, 145}
+\definecolor{purplelish}{RGB}{173, 133, 186}
+\definecolor{blueish}{RGB}{149, 161, 195}
+\definecolor{greenish}{RGB}{116, 161, 142}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{}{GWYN HENDER}{ 
+\href{mailto: gwyn.hender@gmail.com}{ gwyn.hender@gmail.com } \\
+\hspace{} 01 02 03 04 05 \\ 
+https://github.com/
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.99\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\subsection{University of Southern California}
+\descript{Masters in Computer Science} 
+\location{\color{purplelish} Grad. June 2016 | Los Angeles, CA}
+\sectionsep
+\subsection{University of Michigan}
+\descript{Bachelor of Science in Computer Science}
+\location{\color{purplelish}Grad. June 2014 | Ann Arbor, MI}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Telecommunications Inc.}
+\descript{| Back-End Engineer }
+\location{\color{purplelish}September 2018 – Present | Los Angeles, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Write modern, tested, maintainable code for a diverse array of client and internal projects (Python, bash, JS)
+\item Conduct design and code reviews, sign off code for push to production 
+\item Work in an Agile environment and participate in team-led solutions
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Teachers R US}
+\descript{| Teaching Assistant }
+\location{\color{purplelish}September 2017 – May 2018 | Los Angeles, CA}
+\begin{tightemize}
+\item Helped students understand course content and explained topics like data structures (queues, stacks, linked lists and trees), object-oriented programming, recursion and algorithm run-time
+\item Prepared and held weekly labs/tutorials, introducing students to Python and Racket syntax
+\item Proctored and graded quizzes, test and exams
+\end{tightemize}
+\sectionsep
+
+\runsubsection{First Job Inc.}
+\descript{| Software Engineering Intern }
+\location{\color{purplelish}May 2016 - August 2017 | Los Angeles, CA}
+\begin{tightemize}
+\item Wrote bash and Lua scripts to locate and encrypt files identified by a specified extension to prevent tampering/modification, implemented a tiered system to grant privileges for modification (C++, Lua, Javascript, bash, openssl)
+\item Designed and implemented a scraper to obtain Iguana instance logs and insert them to a central Postgres database, designed the schema and tested performance (Lua, Javascript, PostgreSQL)
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Personal Projects}
+\runsubsection{Router/NAT}
+\location{}
+Implemented a simple router that received raw Ethernet  frames and ICMP packets forwarded them to the correct outgoing interface using a static routing table. Extended the router to be able to handle TCP and UDP connections. (C++)
+\sectionsep
+
+\runsubsection{Database Heaps}
+\location{}
+Worked on implementing different database store techniques: storing data using row store versus column store with the ability to scan, insert, update and delete records. Wrote bench-marking scripts to test the speed of block reads/writes. (C++)
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Skills}
+\subsection{Back-End}
+Python \textbullet{} C++ / C \textbullet{} Java \textbullet{} Racket \textbullet{} Lua \textbullet{} Node.js \textbullet{} PostgreSQL \textbullet{} MySQL \textbullet{} Docker 
+\sectionsep
+\subsection{Front-End}
+JavaScript ES6+ \textbullet{} CSS \textbullet{} HTML \textbullet{} React \textbullet{} Angular \textbullet{} Vue
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+% {\color{blueish}Advanced Topics in Database Management} \textbullet{} Computer Networks (Theory \& Practice) \textbullet{} Algorithms \& Data Structures \textbullet{}  Operating Systems \textbullet{} Artificial Intelligence \textbullet{}  Functional Programming \textbullet{}  Statistics \\
+% \sectionsep
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
